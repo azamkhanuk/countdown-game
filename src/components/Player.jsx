@@ -7,7 +7,7 @@ export default function Player() {
 
     const handleClick = () => {
         setEnteredName(playerName.current.value)
-        playerName.current.value - ''
+        playerName.current.value = ''
     }
 
   return (
