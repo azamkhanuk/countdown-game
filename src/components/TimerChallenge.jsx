@@ -6,14 +6,14 @@ const TimerChallenge = ({title, targetTime}) => {
     const [timerExpired, setTimerExpired] = useState(false);
 
     const handleStart = () => {
-        timer = setTimeout(() => {
+        timer.current = setTimeout(() => {
             setTimerExpired(true)
         }, targetTime * 1000)
         setTimerStarted(true)
     }
 
     const handleStop = () => {
-      clearTimeout(timer)
+      clearTimeout(timer.current)
     }
 
     return (
